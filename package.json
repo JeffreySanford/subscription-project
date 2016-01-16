@@ -2,7 +2,7 @@
   "name": "business-subscription-project",
   "version": "1.0.0",
   "description": "MEAN stack driven subscription service for a fake company to sell subscription based ervices oon a SPA website.  Driven by a MongoDB, using express and ANgular for he routing, and Node as the language.  Use fake credit card from Steipe to run the transactions and probably PayPal intergration to view both models.",
-  "main": "app/app.js",
+  "main": "app.js",
   "dependencies": {
     "angular": "^1.4.8",
     "mongodb": "^2.1.3"
