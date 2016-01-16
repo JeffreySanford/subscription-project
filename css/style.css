@@ -1,0 +1,24 @@
+body {
+	width: 90%;
+	margin: 0 auto;
+	font-size: 1em;
+}
+
+.page-template hr {
+	clear:both;
+	margin-top: 2em;
+	border-color: black;
+	width: 85%;
+}
+
+.page-template p {
+	font-size: 1.4em;
+}
+
+.nav-text {
+	font-size: 2em;
+}
+
+.card-element:hover {
+	border: 1px solid blue;
+}

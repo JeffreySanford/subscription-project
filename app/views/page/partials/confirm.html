@@ -1,0 +1,25 @@
+<h1>Confirm Purchases Here</h1>
+
+<div>
+	<table class="table" style="width: 60%; margin: 0 auto;">
+		<thead>
+			<tr>
+				<th>Item Number</th>
+				<th>Product Name</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<tbody ng-repeat="product in selectedProducts">
+			<tr>
+				<td>{{ $index }}</td>
+				<td>{{ product.name }}</td>
+				<td>{{ product.price }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Total: {{ getTotal() | currency:"$" }} <!-- turn this into a factory -->
+
+
+<button>Charge to Stripe</button>

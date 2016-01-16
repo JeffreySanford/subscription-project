@@ -1,0 +1,10 @@
+<h1>Subscriptions Page</h1>
+<div style="font-size: 1.4em;" class="row" ng-repeat="busService in busServices">
+	<div class="col-md-2">
+		<input type="checkbox" ng-model="busServices">
+		</div>
+  	<div class="col-md-5">Item: <b>{{ busService.name }}</b></p></div>
+	<div class="col-md-5">Price: <b>{{ busService.price  | currency:"$"}}</b></div>
+</div>
+<div class="row">
+<p>Total: {{ getTotal() | currency:"$" }} <!-- turn this into a factory -->

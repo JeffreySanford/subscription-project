@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="purchaseModule">
+	<head>
+		<div ng-include src="'app/views/page/inserts/head.html'"></div>
+	</head>
+	<body ng-controller="mainController">
+		<div ng-include src="'app/views/page/inserts/header.html'"></div>
+
+		<div class="container slide-animation page-template" id="page-view" ng-view></div>
+
+		<div ng-include src="'app/views/page/inserts/footer.html'"></div>
+
+		<!--  Using last stable version 1.4.8 -->
+		<script src="https://code.angularjs.org/1.4.8/angular.min.js"></script>
+		<script src="https://code.angularjs.org/1.4.8/angular-route.min.js"></script>
+		<script src="https://code.angularjs.org/1.4.8/angular-animate.min.js"></script>
+		<script src="https://code.angularjs.org/1.4.8/angular-resource.min.js"></script>
+		<script src="app/models/mongolabs.js"></script>
+		<script src="app/app.js"></script>
+
+		
+	</body>
+</html>
