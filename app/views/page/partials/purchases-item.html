@@ -1,0 +1,8 @@
+<h1>Item Page</h1>
+<p>Product Name: {{ product.name }}</p>
+<p>Product Price: {{ product.price | currency:"$" }}</p>
+<p>Product Description: {{ product.description }}</p>
+<br>
+<div id="confirmation">
+	<button id="purchase-item" ng-click="addItem(product)">Purchase This Item</button>
+</div>

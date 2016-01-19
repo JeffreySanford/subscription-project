@@ -1,10 +1,27 @@
 <h1>Subscriptions Page</h1>
-<div style="font-size: 1.4em;" class="row" ng-repeat="busService in busServices">
-	<div class="col-md-2">
-		<input type="checkbox" ng-model="busServices">
+<div class="row" class="repeat-animation">
+	<div ng-repeat="subscription in busSubscriptons">
+		<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			<div id="item-wraper" class="well card-element">
+				<input type="checkbox" id="product-input-{{ subscription.key }}" ng-click="updateTotals(subscription.key)" ng-checked=busService.selected>
+				<img src="img/services.png">
+				<div class="information-block">
+					<a ng-href="#/subscriptions/:{{ subscription.key }}">
+						<p>{{ subscription.name }}</p>
+					</a>
+					<p>{{ subscription.price.toFixed(2) | currency:"$" }}</p>
+				</div> <!-- ends divtext block -->
+			</div> <!-- ends well -->
+		</div> <!-- ends column -->
+	</div> <!-- ends ng-repeat -->
+</div> <!-- end product row -->
+<div class="totals-row">
+	<div class="row" >
+		<div class="col-lg-6">
+			<p>Total: <span ng-init="updateTotalsOnLoad()"></span>{{ productTotal.toFixed(2) | currency:"$" }}</p>
 		</div>
-  	<div class="col-md-5">Item: <b>{{ busService.name }}</b></p></div>
-	<div class="col-md-5">Price: <b>{{ busService.price  | currency:"$"}}</b></div>
-</div>
-<div class="row">
-<p>Total: {{ getTotal() | currency:"$" }} <!-- turn this into a factory -->
+		<div class="col-lg-6">
+			<a href="#/confirm"><button class="confirm-button">Confirm Purchase</button></a>
+		</div>
+	</div> <!-- ends row class -->
+</div> <!-- end clas totals row -->

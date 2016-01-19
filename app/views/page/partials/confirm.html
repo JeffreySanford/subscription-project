@@ -1,25 +1,29 @@
-<h1>Confirm Purchases Here</h1>
-
-<div>
-	<table class="table" style="width: 60%; margin: 0 auto;">
-		<thead>
-			<tr>
-				<th>Item Number</th>
-				<th>Product Name</th>
-				<th>Price</th>
-			</tr>
-		</thead>
-		<tbody ng-repeat="product in selectedProducts">
-			<tr>
-				<td>{{ $index }}</td>
-				<td>{{ product.name }}</td>
-				<td>{{ product.price }}</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-
-<p>Total: {{ getTotal() | currency:"$" }} <!-- turn this into a factory -->
-
-
-<button>Charge to Stripe</button>
+<div id="confirmation-page">
+	<h1>Confirmation of Order</h1>
+	<div id="confirm-table">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Product Name</th>
+					<th>Price</th>
+				</tr>
+			</thead>
+			<tbody ng-repeat="product in selectedProducts">
+				<tr>
+					<td>{{ product.name }}</td>
+					<td>{{ product.price }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div> <!-- ends confirm-table -->
+	<div class="totals-row">
+		<div class"row">
+			<div class="col-md-6">
+				<p>Total: {{ getTotal() | currency:"$" }}</p>
+			</div>
+			<div class="stripe-button" class="col-md-6">
+				<button>Charge to Stripe</button>
+			</div>
+		</div> <!-- ends totals-row -->
+	</div> <!-- ends row class -->
+</div><!-- ends confirmation-page -->

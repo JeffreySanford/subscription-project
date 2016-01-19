@@ -1,24 +1,124 @@
 body {
 	width: 90%;
 	margin: 0 auto;
-	font-size: 1em;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
 }
 
-.page-template hr {
-	clear:both;
-	margin-top: 2em;
-	border-color: black;
-	width: 85%;
+#masthead img {
+	margin: -30px 0 0 -1em;
+	width: 100px; 
+	height: 75px;
+}
+
+#masthead a {
+	float: right;
+	font-size: 1.8em;
+	color: orange;
+}
+
+#masthead a:hover {
+	color: green;
+}
+
+
+header hr {
+	clear:both; 
+	display: relative; 
+	border-color: black; 
+	width: 60%; 
+	margin: 1em auto 0;
+}
+
+.page-template h1 {
+	font-size: 1.5em; 
+	margin: .5em 0 .5em;
 }
 
 .page-template p {
-	font-size: 1.4em;
+	font-size: 1.0em;
 }
 
-.nav-text {
-	font-size: 2em;
+#landing-page-text {
+	font-size: 1.1em;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.card-element {
+	width:90%; 
+	height: 75px; 
+	margin:0 0 1em 0; 
+	padding:0
+}
+.card-element img {
+	margin-left: -15px;
+	top: -10px;
+	float: left;
+	margin-right: 1em; 
+	width: 75px; 
+	height: 75px;
+}
+
+.card-element input {
+	margin-left: 3px;
+	top: 1px;
+	float: left;
+}
+
+.card-element a {
 }
 
 .card-element:hover {
 	border: 1px solid blue;
+}
+
+.information-block {
+	display: block;
+}
+
+.totals-row {
+	width: 70%;
+	margin: 1em auto 0;
+	font-size: 1em;
+}
+
+.totals-row p{
+	float:left;
+	
+}
+
+#confirmation-page {
+
+}
+
+#confirm-table table {
+	width: 60%;
+	margin: 0 auto;
+}
+
+#confirm-table h1 {
+	font-size: 2.5em;
+}
+
+#confirm-table td, #confirm-table th {
+    font-size: 1.4em;
+}
+
+.totals-row {
+	margin: 2em auto 0; 
+	width:80%;
+}
+.totals-row p{
+	font-size: 1.6em;
+}
+
+.confirm-button {
+	float: right;
+	font-size: 1.3em;
+}
+
+.stripe-button {
+	float: right;
+	font-size: 1.3em;
 }
